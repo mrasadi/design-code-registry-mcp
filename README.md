@@ -192,6 +192,12 @@ Every command accepts `-p, --path <path>` to point at a specific registry, or re
 npm install -g design-code-registry-mcp
 # or, without installing:
 npx design-code-registry-mcp init
+
+# or install locally:
+
+npm run build
+
+claude mcp add --scope project design-registry -- node /ABSOLUTE/PATH/TO/design-code-registry-mcp/dist/index.js
 ```
 
 ## Claude Code setup

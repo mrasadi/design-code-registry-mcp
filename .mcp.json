@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "design-code-registry-mcp": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "/Users/mehrza/Code/design-code-registry-mcp/dist/index.js"
+      ],
+      "env": {}
+    }
+  }
+}
