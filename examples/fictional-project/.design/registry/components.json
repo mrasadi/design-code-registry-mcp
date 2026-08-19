@@ -1,0 +1,330 @@
+{
+  "components": [
+    {
+      "id": "button",
+      "name": "Button",
+      "aliases": [
+        "CTA",
+        "Action Button"
+      ],
+      "description": "Primary interactive control for triggering an action.",
+      "design": [
+        {
+          "tool": "figma",
+          "fileId": "AURORA_DS_FILE",
+          "nodeId": "12:340",
+          "url": "https://figma.com/file/AURORA_DS_FILE?node-id=12-340",
+          "name": "Button"
+        }
+      ],
+      "implementations": [
+        {
+          "language": "typescript",
+          "framework": "react",
+          "component": "Button",
+          "sourcePath": "src/components/Button.tsx",
+          "importPath": "@/components/Button"
+        },
+        {
+          "language": "dart",
+          "framework": "flutter",
+          "component": "AuroraButton",
+          "sourcePath": "lib/widgets/aurora_button.dart"
+        }
+      ],
+      "variants": {
+        "appearance": [
+          "primary",
+          "secondary",
+          "ghost"
+        ],
+        "size": [
+          "sm",
+          "md",
+          "lg"
+        ]
+      },
+      "properties": [
+        {
+          "name": "appearance",
+          "type": "string",
+          "required": false,
+          "defaultValue": "primary",
+          "allowedValues": [
+            "primary",
+            "secondary",
+            "ghost"
+          ]
+        },
+        {
+          "name": "size",
+          "type": "string",
+          "required": false,
+          "defaultValue": "md",
+          "allowedValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": false
+        },
+        {
+          "name": "onPress",
+          "type": "() => void",
+          "required": true,
+          "description": "Called when the button is activated."
+        }
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "active",
+        "disabled"
+      ],
+      "accessibility": {
+        "role": "button",
+        "ariaAttributes": [
+          "aria-disabled"
+        ],
+        "keyboardInteractions": [
+          "Enter activates",
+          "Space activates"
+        ]
+      },
+      "rules": {
+        "reuse": true,
+        "allowDuplicate": false,
+        "constraints": [
+          "Never use a raw <button> or Pressable when Button covers the need."
+        ]
+      },
+      "examples": [
+        {
+          "title": "Primary CTA",
+          "description": "Default primary button.",
+          "code": "<Button appearance=\"primary\">Continue</Button>",
+          "language": "tsx"
+        }
+      ],
+      "status": "approved",
+      "tags": [
+        "form",
+        "action",
+        "core"
+      ],
+      "createdAt": "2026-08-19T10:51:36.440Z",
+      "updatedAt": "2026-08-19T10:51:36.440Z"
+    },
+    {
+      "id": "input",
+      "name": "Input",
+      "aliases": [
+        "TextField",
+        "Text Input"
+      ],
+      "description": "Single-line text input with label and error states.",
+      "design": [
+        {
+          "tool": "figma",
+          "fileId": "AURORA_DS_FILE",
+          "nodeId": "12:410",
+          "url": "https://figma.com/file/AURORA_DS_FILE?node-id=12-410",
+          "name": "Input"
+        }
+      ],
+      "implementations": [
+        {
+          "language": "typescript",
+          "framework": "react",
+          "component": "Input",
+          "sourcePath": "src/components/Input.tsx",
+          "importPath": "@/components/Input"
+        }
+      ],
+      "variants": {
+        "state": [
+          "default",
+          "error",
+          "disabled"
+        ]
+      },
+      "properties": [
+        {
+          "name": "label",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "required": true
+        },
+        {
+          "name": "errorMessage",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "states": [
+        "default",
+        "focus",
+        "error",
+        "disabled"
+      ],
+      "accessibility": {
+        "role": "textbox",
+        "ariaAttributes": [
+          "aria-invalid",
+          "aria-describedby"
+        ]
+      },
+      "rules": {
+        "reuse": true,
+        "allowDuplicate": false
+      },
+      "examples": [],
+      "status": "approved",
+      "tags": [
+        "form",
+        "core"
+      ],
+      "createdAt": "2026-08-19T10:51:36.441Z",
+      "updatedAt": "2026-08-19T10:51:36.441Z"
+    },
+    {
+      "id": "card",
+      "name": "Card",
+      "aliases": [],
+      "description": "Generic elevated surface used to group related content.",
+      "design": [
+        {
+          "tool": "figma",
+          "fileId": "AURORA_DS_FILE",
+          "nodeId": "12:512",
+          "url": "https://figma.com/file/AURORA_DS_FILE?node-id=12-512",
+          "name": "Card"
+        }
+      ],
+      "implementations": [
+        {
+          "language": "typescript",
+          "framework": "react",
+          "component": "Card",
+          "sourcePath": "src/components/Card.tsx",
+          "importPath": "@/components/Card"
+        }
+      ],
+      "variants": {
+        "padding": [
+          "compact",
+          "default",
+          "spacious"
+        ]
+      },
+      "properties": [],
+      "states": [
+        "default",
+        "hover"
+      ],
+      "rules": {
+        "reuse": true,
+        "allowDuplicate": false,
+        "constraints": [
+          "Use spacing-16 for default internal padding; do not hardcode 16px."
+        ]
+      },
+      "examples": [],
+      "status": "approved",
+      "tags": [
+        "layout",
+        "core"
+      ],
+      "createdAt": "2026-08-19T10:51:36.442Z",
+      "updatedAt": "2026-08-19T10:51:36.442Z"
+    },
+    {
+      "id": "modal",
+      "name": "Modal",
+      "aliases": [
+        "Dialog"
+      ],
+      "description": "Overlay surface for focused tasks or confirmations.",
+      "design": [
+        {
+          "tool": "figma",
+          "fileId": "AURORA_DS_FILE",
+          "nodeId": "12:600",
+          "url": "https://figma.com/file/AURORA_DS_FILE?node-id=12-600",
+          "name": "Modal"
+        }
+      ],
+      "implementations": [
+        {
+          "language": "typescript",
+          "framework": "react",
+          "component": "Modal",
+          "sourcePath": "src/components/Modal.tsx",
+          "importPath": "@/components/Modal"
+        }
+      ],
+      "variants": {},
+      "properties": [
+        {
+          "name": "isOpen",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "states": [
+        "open",
+        "closed"
+      ],
+      "accessibility": {
+        "role": "dialog",
+        "ariaAttributes": [
+          "aria-modal",
+          "aria-labelledby"
+        ],
+        "keyboardInteractions": [
+          "Escape closes"
+        ]
+      },
+      "rules": {
+        "reuse": true,
+        "allowDuplicate": false,
+        "constraints": [
+          "Compose with Button for actions; never build custom footer buttons."
+        ]
+      },
+      "examples": [],
+      "status": "approved",
+      "tags": [
+        "overlay",
+        "core"
+      ],
+      "createdAt": "2026-08-19T10:51:36.444Z",
+      "updatedAt": "2026-08-19T10:51:36.444Z"
+    }
+  ]
+}

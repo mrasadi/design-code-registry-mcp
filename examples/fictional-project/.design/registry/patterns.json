@@ -1,0 +1,57 @@
+{
+  "patterns": [
+    {
+      "id": "empty-state",
+      "name": "Empty State",
+      "description": "Centered illustration/message shown when a list or view has no content yet.",
+      "design": [],
+      "components": [
+        "button"
+      ],
+      "relatedPatterns": [],
+      "compositionRules": [
+        "Message + optional primary Button action, centered vertically and horizontally."
+      ],
+      "layoutRules": [
+        "Max content width 360px.",
+        "Use spacing-16 between message and action button."
+      ],
+      "responsiveBehavior": "Stacks vertically at all breakpoints; no layout change needed below 480px.",
+      "usageConstraints": [
+        "Do not use for loading states — use a skeleton/spinner pattern instead (not yet registered)."
+      ],
+      "status": "approved",
+      "tags": [
+        "layout"
+      ],
+      "createdAt": "2026-08-19T10:51:36.445Z",
+      "updatedAt": "2026-08-19T10:51:36.445Z"
+    },
+    {
+      "id": "confirmation-dialog",
+      "name": "Confirmation Dialog",
+      "description": "A Modal used to confirm a destructive or significant action.",
+      "design": [],
+      "components": [
+        "modal",
+        "button"
+      ],
+      "relatedPatterns": [],
+      "compositionRules": [
+        "Modal with title, one sentence of body copy, and two Buttons: secondary Cancel + primary Confirm."
+      ],
+      "layoutRules": [
+        "Buttons right-aligned in the footer, Cancel before Confirm."
+      ],
+      "usageConstraints": [
+        "Confirm button appearance should be 'primary' unless the action is destructive, in which case use project rule 'destructive-action-color'."
+      ],
+      "status": "approved",
+      "tags": [
+        "overlay"
+      ],
+      "createdAt": "2026-08-19T10:51:36.446Z",
+      "updatedAt": "2026-08-19T10:51:36.446Z"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "rules": [
+    {
+      "id": "prefer-existing-button",
+      "statement": "Always reuse the registered Button component for any clickable action; never hand-roll a new button element.",
+      "appliesTo": {
+        "type": "component",
+        "id": "button"
+      },
+      "severity": "must",
+      "rationale": "Button already encodes accessibility, focus, and state handling.",
+      "tags": [
+        "reuse"
+      ]
+    },
+    {
+      "id": "no-duplicate-cards",
+      "statement": "Do not create a second 'card-like' canonical component; extend Card's variants instead.",
+      "appliesTo": {
+        "type": "component",
+        "id": "card"
+      },
+      "severity": "must",
+      "tags": [
+        "reuse"
+      ]
+    },
+    {
+      "id": "use-spacing-tokens",
+      "statement": "Use spacing tokens (spacing-4, spacing-16, ...) for layout gaps; never hardcode pixel values for spacing.",
+      "appliesTo": {
+        "type": "general"
+      },
+      "severity": "must",
+      "tags": [
+        "tokens"
+      ]
+    },
+    {
+      "id": "empty-state-for-empty-lists",
+      "statement": "Use the empty-state pattern whenever a list or collection view has zero items.",
+      "appliesTo": {
+        "type": "pattern",
+        "id": "empty-state"
+      },
+      "severity": "should",
+      "tags": [
+        "pattern"
+      ]
+    },
+    {
+      "id": "accessible-modals",
+      "statement": "Every Modal instance must set aria-labelledby to the modal's title element id.",
+      "appliesTo": {
+        "type": "component",
+        "id": "modal"
+      },
+      "severity": "must",
+      "tags": [
+        "accessibility"
+      ]
+    }
+  ]
+}

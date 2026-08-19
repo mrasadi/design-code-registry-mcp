@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "registryVersion": "0.1.0",
+  "project": {
+    "name": "Aurora Design System (Example)",
+    "description": "A fictional example project demonstrating the Design-Code Registry MCP. Not a real product."
+  },
+  "design": {
+    "tool": "figma"
+  }
+}
